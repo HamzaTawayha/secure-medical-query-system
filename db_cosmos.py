@@ -43,3 +43,8 @@ def log_query(log_data):
     collection = get_logs_collection()
     result = collection.insert_one(log_data)
     return str(result.inserted_id)
+
+
+def fetch_query_logs(limit=100):
+    collection = get_logs_collection()
+    return list(collection.find().sort("timestamp", -1).limit(limit))

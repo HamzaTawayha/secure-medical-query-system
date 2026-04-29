@@ -14,7 +14,10 @@ def main():
     print()
 
     print("Risk Score:", result["risk_score"])
+    print("Risk Probability:", result["risk_probability"])
     print("Decision:", result["decision"])
+    print("Review Priority:", result["review_priority"])
+    print("Decision Reason:", result["decision_reason"])
     print("Log ID:", result["log_id"])
     print()
 
